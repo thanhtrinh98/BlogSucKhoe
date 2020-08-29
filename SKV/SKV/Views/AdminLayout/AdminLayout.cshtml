@@ -1,0 +1,75 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<title>Trang Quản Lí </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="~/Areas/Admin/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Areas/Admin/css/bootstrap.css" rel="stylesheet" />
+<link href="~/CSS/admin.css" rel="stylesheet" />
+<style>
+    html, body, h1, h2, h3, h4, h5 {
+        font-family: "Raleway", sans-serif
+    }
+</style>
+<body class="w3-light-grey">
+
+    <!-- Top container -->
+    <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+        <span style="color:black;" class="w3-bar-item w3-right">Welcome, <strong><a style="color:black;" href="@Url.Action("Index","Home")">Vinh</a></strong></span>
+    </div>
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar">
+        <br>
+        @*<div class="w3-container w3-row">
+            <div class="w3-col s4">
+                <img src="" class="w3-circle w3-margin-right" style="width:46px">
+            </div>*@
+
+        @*<div class="log" style="float:left;">
+                </br><span>Welcome, <strong><a href="@Url.Action("Index","Home")">Vinh</a></strong></span><br>
+            </div>*@
+
+
+
+        </div>
+
+        <div class="w3-container">
+            <h5 style="text-align:center;">Bảng Điều Khiển</h5>
+        </div>
+        <div class="w3-bar-block">
+
+            <a href="@Url.Action("ThucDon","AdminUser")" class="w3-bar-item w3-button w3-padding w3-blue"> Thực Đơn Định Kì</a>
+            <a href="@Url.Action("CheDo","AdminUser")" class="w3-bar-item w3-button w3-padding w3-blue">Chế Độ Luyện Tập  </a>
+            <a href="@Url.Action("CacMeoVat","AdminUser")" class="w3-bar-item w3-button w3-padding w3-blue">  Các Mẹo Vặt</a>
+            <a href="@Url.Action("Index","AdminUser")" class="w3-bar-item w3-button w3-padding w3-blue">Thành Viên</a>
+
+
+        </div>
+    </nav>
+
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px;margin-top:43px;">
+
+        <!-- Header -->
+        <header class="w3-container" style="padding-top:22px">
+            
+        </header>
+
+        @RenderBody()
+
+    </div>
+
+
+
+
+
+</body>
+</html>

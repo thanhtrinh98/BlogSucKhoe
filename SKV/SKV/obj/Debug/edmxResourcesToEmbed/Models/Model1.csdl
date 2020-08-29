@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="qlskModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BinhLuan">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="ThucDon_id" Type="Int32" />
+    <Property Name="NguoiDung_id" Type="Int32" />
+    <Property Name="NoiDung" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ngaytao" Type="DateTime" Precision="3" />
+    <Property Name="User_Ten" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="NguoiDung" Relationship="Self.FK_BinhLuan_NguoiDung" FromRole="BinhLuan" ToRole="NguoiDung" />
+    <NavigationProperty Name="ThucDon" Relationship="Self.FK_BinhLuan_ThucDon" FromRole="BinhLuan" ToRole="ThucDon" />
+    <NavigationProperty Name="NguoiDungs" Relationship="Self.FK_NguoiDung_BinhLuan" FromRole="BinhLuan" ToRole="NguoiDung" />
+  </EntityType>
+  <EntityType Name="CacMeoVat">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HinhAnh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CacMeoVat1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CheDo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HinhAnh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CacBaiTap" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MotaCD" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CuongDo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TinhTDEEs" Relationship="Self.FK_TinhTDEE_CuongDo" FromRole="CuongDo" ToRole="TinhTDEE" />
+  </EntityType>
+  <EntityType Name="KetQuaTDEE">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="KetQua" Type="Double" />
+    <Property Name="HinhAnhTD" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ThucDon_ID" Type="Int32" />
+    <NavigationProperty Name="ThucDon" Relationship="Self.FK_KetQuaTDEE_ThucDon" FromRole="KetQuaTDEE" ToRole="ThucDon" />
+  </EntityType>
+  <EntityType Name="NguoiDung">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TaiKhoan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MatKhau" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TenNguoiDung" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CapDo" Type="Int32" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <Property Name="comment_id" Type="Int32" />
+    <NavigationProperty Name="BinhLuans" Relationship="Self.FK_BinhLuan_NguoiDung" FromRole="NguoiDung" ToRole="BinhLuan" />
+    <NavigationProperty Name="BinhLuan" Relationship="Self.FK_NguoiDung_BinhLuan" FromRole="NguoiDung" ToRole="BinhLuan" />
+    <NavigationProperty Name="Table_Online" Relationship="Self.FK_Table_Online_NguoiDung" FromRole="NguoiDung" ToRole="Table_Online" />
+  </EntityType>
+  <EntityType Name="Table_GioiTinh">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ThuocGioiTinh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TinhTDEEs" Relationship="Self.FK_TinhTDEE_Table_GioiTinh" FromRole="Table_GioiTinh" ToRole="TinhTDEE" />
+  </EntityType>
+  <EntityType Name="Table_Online">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SoTV" Type="Int32" />
+    <Property Name="NguoiDung_id" Type="Int32" />
+    <NavigationProperty Name="NguoiDung" Relationship="Self.FK_Table_Online_NguoiDung" FromRole="Table_Online" ToRole="NguoiDung" />
+  </EntityType>
+  <EntityType Name="ThucDon">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HinhAnh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TenMonAn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Loai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NguyenLieu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Buoc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Mota2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="BinhLuans" Relationship="Self.FK_BinhLuan_ThucDon" FromRole="ThucDon" ToRole="BinhLuan" />
+    <NavigationProperty Name="KetQuaTDEEs" Relationship="Self.FK_KetQuaTDEE_ThucDon" FromRole="ThucDon" ToRole="KetQuaTDEE" />
+  </EntityType>
+  <EntityType Name="TinhTDEE">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CanNang" Type="Double" />
+    <Property Name="ChieuCao" Type="Double" />
+    <Property Name="Tuoi" Type="Int32" />
+    <Property Name="CuongDoID" Type="Int32" />
+    <Property Name="GioiTinhID" Type="Int32" />
+    <NavigationProperty Name="CuongDo" Relationship="Self.FK_TinhTDEE_CuongDo" FromRole="TinhTDEE" ToRole="CuongDo" />
+    <NavigationProperty Name="Table_GioiTinh" Relationship="Self.FK_TinhTDEE_Table_GioiTinh" FromRole="TinhTDEE" ToRole="Table_GioiTinh" />
+  </EntityType>
+  <Association Name="FK_BinhLuan_NguoiDung">
+    <End Role="NguoiDung" Type="Self.NguoiDung" Multiplicity="0..1" />
+    <End Role="BinhLuan" Type="Self.BinhLuan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NguoiDung">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="BinhLuan">
+        <PropertyRef Name="NguoiDung_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BinhLuan_ThucDon">
+    <End Role="ThucDon" Type="Self.ThucDon" Multiplicity="0..1" />
+    <End Role="BinhLuan" Type="Self.BinhLuan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ThucDon">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="BinhLuan">
+        <PropertyRef Name="ThucDon_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NguoiDung_BinhLuan">
+    <End Role="BinhLuan" Type="Self.BinhLuan" Multiplicity="0..1" />
+    <End Role="NguoiDung" Type="Self.NguoiDung" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BinhLuan">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="NguoiDung">
+        <PropertyRef Name="comment_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TinhTDEE_CuongDo">
+    <End Role="CuongDo" Type="Self.CuongDo" Multiplicity="0..1" />
+    <End Role="TinhTDEE" Type="Self.TinhTDEE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CuongDo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TinhTDEE">
+        <PropertyRef Name="CuongDoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KetQuaTDEE_ThucDon">
+    <End Role="ThucDon" Type="Self.ThucDon" Multiplicity="0..1" />
+    <End Role="KetQuaTDEE" Type="Self.KetQuaTDEE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ThucDon">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="KetQuaTDEE">
+        <PropertyRef Name="ThucDon_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_Online_NguoiDung">
+    <End Role="NguoiDung" Type="Self.NguoiDung" Multiplicity="0..1" />
+    <End Role="Table_Online" Type="Self.Table_Online" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NguoiDung">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Table_Online">
+        <PropertyRef Name="NguoiDung_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TinhTDEE_Table_GioiTinh">
+    <End Role="Table_GioiTinh" Type="Self.Table_GioiTinh" Multiplicity="0..1" />
+    <End Role="TinhTDEE" Type="Self.TinhTDEE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Table_GioiTinh">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TinhTDEE">
+        <PropertyRef Name="GioiTinhID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="qlskEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BinhLuans" EntityType="Self.BinhLuan" />
+    <EntitySet Name="CacMeoVats" EntityType="Self.CacMeoVat" />
+    <EntitySet Name="CheDoes" EntityType="Self.CheDo" />
+    <EntitySet Name="CuongDoes" EntityType="Self.CuongDo" />
+    <EntitySet Name="KetQuaTDEEs" EntityType="Self.KetQuaTDEE" />
+    <EntitySet Name="NguoiDungs" EntityType="Self.NguoiDung" />
+    <EntitySet Name="Table_GioiTinh" EntityType="Self.Table_GioiTinh" />
+    <EntitySet Name="Table_Online" EntityType="Self.Table_Online" />
+    <EntitySet Name="ThucDons" EntityType="Self.ThucDon" />
+    <EntitySet Name="TinhTDEEs" EntityType="Self.TinhTDEE" />
+    <AssociationSet Name="FK_BinhLuan_NguoiDung" Association="Self.FK_BinhLuan_NguoiDung">
+      <End Role="NguoiDung" EntitySet="NguoiDungs" />
+      <End Role="BinhLuan" EntitySet="BinhLuans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BinhLuan_ThucDon" Association="Self.FK_BinhLuan_ThucDon">
+      <End Role="ThucDon" EntitySet="ThucDons" />
+      <End Role="BinhLuan" EntitySet="BinhLuans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NguoiDung_BinhLuan" Association="Self.FK_NguoiDung_BinhLuan">
+      <End Role="BinhLuan" EntitySet="BinhLuans" />
+      <End Role="NguoiDung" EntitySet="NguoiDungs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TinhTDEE_CuongDo" Association="Self.FK_TinhTDEE_CuongDo">
+      <End Role="CuongDo" EntitySet="CuongDoes" />
+      <End Role="TinhTDEE" EntitySet="TinhTDEEs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KetQuaTDEE_ThucDon" Association="Self.FK_KetQuaTDEE_ThucDon">
+      <End Role="ThucDon" EntitySet="ThucDons" />
+      <End Role="KetQuaTDEE" EntitySet="KetQuaTDEEs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_Online_NguoiDung" Association="Self.FK_Table_Online_NguoiDung">
+      <End Role="NguoiDung" EntitySet="NguoiDungs" />
+      <End Role="Table_Online" EntitySet="Table_Online" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TinhTDEE_Table_GioiTinh" Association="Self.FK_TinhTDEE_Table_GioiTinh">
+      <End Role="Table_GioiTinh" EntitySet="Table_GioiTinh" />
+      <End Role="TinhTDEE" EntitySet="TinhTDEEs" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

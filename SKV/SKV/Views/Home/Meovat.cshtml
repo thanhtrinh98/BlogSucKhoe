@@ -1,0 +1,49 @@
+﻿@using SKV.Models
+@model List<CacMeoVat>
+@{
+    ViewBag.Title = "Meovat";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/CSS/meovat.css" rel="stylesheet" />
+<script src="~/JV/jquery-3.3.1.min.js">y</script>
+<script src="~/JV/quey.js"></script>
+
+<div class="baner">
+    <div class="over">
+        <div class="sli">
+            <img src="~/IMG/scale-403585_1920.jpg" />
+            <img src="~/IMG/alternative-906138_1920.jpg" />
+            <img src="~/IMG/woman-3177574_1920.jpg" />
+        </div>
+    </div>
+</div>
+<div class="main">
+
+    <div class="text1">
+        <h1 style="text-align:center"> CÁC MẸO VẶT CHO SỨC KHỎE </h1>
+    </div>
+    <div class="hinh123">
+        @foreach (var item in Model)
+        {
+
+
+            <div class="hinh1">
+                <img src="@Url.Content("~/IMG/" + item.HinhAnh)" alt="Hình ảnh" width="300" height="300" />
+                <a href="@item.Link"><h3 style="text-align:center; color:black;"> @item.CacMeoVat1 </h3></a>
+
+            </div>
+        }
+
+        <div class="clr"></div>
+        <div>
+            <h2 style="margin-left:570px; padding-top:30px;">
+                <a href="@Url.Action("TinhBMR","TDEE")" style="color:orange;">Tính Chỉ Số TDEE</a>
+            </h2>
+        </div>
+
+    </div>
+
+
+</div>
+

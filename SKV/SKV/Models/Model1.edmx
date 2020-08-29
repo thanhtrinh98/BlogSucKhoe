@@ -1,0 +1,604 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="qlskModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BinhLuan">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="ThucDon_id" Type="int" />
+          <Property Name="NguoiDung_id" Type="int" />
+          <Property Name="NoiDung" Type="nvarchar" MaxLength="255" />
+          <Property Name="ngaytao" Type="datetime" />
+          <Property Name="User_Ten" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="CacMeoVat">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HinhAnh" Type="nvarchar(max)" />
+          <Property Name="CacMeoVat" Type="nvarchar(max)" />
+          <Property Name="Link" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="CheDo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HinhAnh" Type="nvarchar(max)" />
+          <Property Name="CacBaiTap" Type="nvarchar(max)" />
+          <Property Name="Link" Type="nvarchar(max)" />
+          <Property Name="MotaCD" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="CuongDo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MoTa" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="KetQuaTDEE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="KetQua" Type="float" />
+          <Property Name="HinhAnhTD" Type="nvarchar(max)" />
+          <Property Name="ThucDon_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="NguoiDung">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TaiKhoan" Type="nvarchar" MaxLength="255" />
+          <Property Name="MatKhau" Type="nvarchar" MaxLength="255" />
+          <Property Name="TenNguoiDung" Type="nvarchar" MaxLength="255" />
+          <Property Name="CapDo" Type="int" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="comment_id" Type="int" />
+        </EntityType>
+        <EntityType Name="Table_GioiTinh">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ThuocGioiTinh" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Table_Online">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SoTV" Type="int" />
+          <Property Name="NguoiDung_id" Type="int" />
+        </EntityType>
+        <EntityType Name="ThucDon">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HinhAnh" Type="nvarchar(max)" />
+          <Property Name="TenMonAn" Type="nvarchar" MaxLength="50" />
+          <Property Name="Loai" Type="nvarchar" MaxLength="50" />
+          <Property Name="MoTa" Type="nvarchar(max)" />
+          <Property Name="NguyenLieu" Type="nvarchar(max)" />
+          <Property Name="Buoc" Type="nvarchar(max)" />
+          <Property Name="Mota2" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="TinhTDEE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CanNang" Type="float" />
+          <Property Name="ChieuCao" Type="float" />
+          <Property Name="Tuoi" Type="int" />
+          <Property Name="CuongDoID" Type="int" />
+          <Property Name="GioiTinhID" Type="int" />
+        </EntityType>
+        <Association Name="FK_BinhLuan_NguoiDung">
+          <End Role="NguoiDung" Type="Self.NguoiDung" Multiplicity="0..1" />
+          <End Role="BinhLuan" Type="Self.BinhLuan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NguoiDung">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="BinhLuan">
+              <PropertyRef Name="NguoiDung_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BinhLuan_ThucDon">
+          <End Role="ThucDon" Type="Self.ThucDon" Multiplicity="0..1" />
+          <End Role="BinhLuan" Type="Self.BinhLuan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ThucDon">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="BinhLuan">
+              <PropertyRef Name="ThucDon_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KetQuaTDEE_ThucDon">
+          <End Role="ThucDon" Type="Self.ThucDon" Multiplicity="0..1" />
+          <End Role="KetQuaTDEE" Type="Self.KetQuaTDEE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ThucDon">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="KetQuaTDEE">
+              <PropertyRef Name="ThucDon_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NguoiDung_BinhLuan">
+          <End Role="BinhLuan" Type="Self.BinhLuan" Multiplicity="0..1" />
+          <End Role="NguoiDung" Type="Self.NguoiDung" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BinhLuan">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="NguoiDung">
+              <PropertyRef Name="comment_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Table_Online_NguoiDung">
+          <End Role="NguoiDung" Type="Self.NguoiDung" Multiplicity="0..1" />
+          <End Role="Table_Online" Type="Self.Table_Online" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NguoiDung">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Table_Online">
+              <PropertyRef Name="NguoiDung_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TinhTDEE_CuongDo">
+          <End Role="CuongDo" Type="Self.CuongDo" Multiplicity="0..1" />
+          <End Role="TinhTDEE" Type="Self.TinhTDEE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CuongDo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="TinhTDEE">
+              <PropertyRef Name="CuongDoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TinhTDEE_Table_GioiTinh">
+          <End Role="Table_GioiTinh" Type="Self.Table_GioiTinh" Multiplicity="0..1" />
+          <End Role="TinhTDEE" Type="Self.TinhTDEE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Table_GioiTinh">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="TinhTDEE">
+              <PropertyRef Name="GioiTinhID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="qlskModelStoreContainer">
+          <EntitySet Name="BinhLuan" EntityType="Self.BinhLuan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CacMeoVat" EntityType="Self.CacMeoVat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CheDo" EntityType="Self.CheDo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CuongDo" EntityType="Self.CuongDo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KetQuaTDEE" EntityType="Self.KetQuaTDEE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NguoiDung" EntityType="Self.NguoiDung" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_GioiTinh" EntityType="Self.Table_GioiTinh" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_Online" EntityType="Self.Table_Online" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ThucDon" EntityType="Self.ThucDon" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TinhTDEE" EntityType="Self.TinhTDEE" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_BinhLuan_NguoiDung" Association="Self.FK_BinhLuan_NguoiDung">
+            <End Role="NguoiDung" EntitySet="NguoiDung" />
+            <End Role="BinhLuan" EntitySet="BinhLuan" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BinhLuan_ThucDon" Association="Self.FK_BinhLuan_ThucDon">
+            <End Role="ThucDon" EntitySet="ThucDon" />
+            <End Role="BinhLuan" EntitySet="BinhLuan" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KetQuaTDEE_ThucDon" Association="Self.FK_KetQuaTDEE_ThucDon">
+            <End Role="ThucDon" EntitySet="ThucDon" />
+            <End Role="KetQuaTDEE" EntitySet="KetQuaTDEE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NguoiDung_BinhLuan" Association="Self.FK_NguoiDung_BinhLuan">
+            <End Role="BinhLuan" EntitySet="BinhLuan" />
+            <End Role="NguoiDung" EntitySet="NguoiDung" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Table_Online_NguoiDung" Association="Self.FK_Table_Online_NguoiDung">
+            <End Role="NguoiDung" EntitySet="NguoiDung" />
+            <End Role="Table_Online" EntitySet="Table_Online" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TinhTDEE_CuongDo" Association="Self.FK_TinhTDEE_CuongDo">
+            <End Role="CuongDo" EntitySet="CuongDo" />
+            <End Role="TinhTDEE" EntitySet="TinhTDEE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TinhTDEE_Table_GioiTinh" Association="Self.FK_TinhTDEE_Table_GioiTinh">
+            <End Role="Table_GioiTinh" EntitySet="Table_GioiTinh" />
+            <End Role="TinhTDEE" EntitySet="TinhTDEE" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="qlskModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BinhLuan">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="ThucDon_id" Type="Int32" />
+          <Property Name="NguoiDung_id" Type="Int32" />
+          <Property Name="NoiDung" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ngaytao" Type="DateTime" Precision="3" />
+          <Property Name="User_Ten" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="NguoiDung" Relationship="Self.FK_BinhLuan_NguoiDung" FromRole="BinhLuan" ToRole="NguoiDung" />
+          <NavigationProperty Name="ThucDon" Relationship="Self.FK_BinhLuan_ThucDon" FromRole="BinhLuan" ToRole="ThucDon" />
+          <NavigationProperty Name="NguoiDungs" Relationship="Self.FK_NguoiDung_BinhLuan" FromRole="BinhLuan" ToRole="NguoiDung" />
+        </EntityType>
+        <EntityType Name="CacMeoVat">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HinhAnh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CacMeoVat1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CheDo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HinhAnh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CacBaiTap" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MotaCD" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CuongDo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TinhTDEEs" Relationship="Self.FK_TinhTDEE_CuongDo" FromRole="CuongDo" ToRole="TinhTDEE" />
+        </EntityType>
+        <EntityType Name="KetQuaTDEE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="KetQua" Type="Double" />
+          <Property Name="HinhAnhTD" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ThucDon_ID" Type="Int32" />
+          <NavigationProperty Name="ThucDon" Relationship="Self.FK_KetQuaTDEE_ThucDon" FromRole="KetQuaTDEE" ToRole="ThucDon" />
+        </EntityType>
+        <EntityType Name="NguoiDung">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TaiKhoan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MatKhau" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TenNguoiDung" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CapDo" Type="Int32" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="comment_id" Type="Int32" />
+          <NavigationProperty Name="BinhLuans" Relationship="Self.FK_BinhLuan_NguoiDung" FromRole="NguoiDung" ToRole="BinhLuan" />
+          <NavigationProperty Name="BinhLuan" Relationship="Self.FK_NguoiDung_BinhLuan" FromRole="NguoiDung" ToRole="BinhLuan" />
+          <NavigationProperty Name="Table_Online" Relationship="Self.FK_Table_Online_NguoiDung" FromRole="NguoiDung" ToRole="Table_Online" />
+        </EntityType>
+        <EntityType Name="Table_GioiTinh">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ThuocGioiTinh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TinhTDEEs" Relationship="Self.FK_TinhTDEE_Table_GioiTinh" FromRole="Table_GioiTinh" ToRole="TinhTDEE" />
+        </EntityType>
+        <EntityType Name="Table_Online">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SoTV" Type="Int32" />
+          <Property Name="NguoiDung_id" Type="Int32" />
+          <NavigationProperty Name="NguoiDung" Relationship="Self.FK_Table_Online_NguoiDung" FromRole="Table_Online" ToRole="NguoiDung" />
+        </EntityType>
+        <EntityType Name="ThucDon">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HinhAnh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TenMonAn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Loai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NguyenLieu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Buoc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Mota2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="BinhLuans" Relationship="Self.FK_BinhLuan_ThucDon" FromRole="ThucDon" ToRole="BinhLuan" />
+          <NavigationProperty Name="KetQuaTDEEs" Relationship="Self.FK_KetQuaTDEE_ThucDon" FromRole="ThucDon" ToRole="KetQuaTDEE" />
+        </EntityType>
+        <EntityType Name="TinhTDEE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CanNang" Type="Double" />
+          <Property Name="ChieuCao" Type="Double" />
+          <Property Name="Tuoi" Type="Int32" />
+          <Property Name="CuongDoID" Type="Int32" />
+          <Property Name="GioiTinhID" Type="Int32" />
+          <NavigationProperty Name="CuongDo" Relationship="Self.FK_TinhTDEE_CuongDo" FromRole="TinhTDEE" ToRole="CuongDo" />
+          <NavigationProperty Name="Table_GioiTinh" Relationship="Self.FK_TinhTDEE_Table_GioiTinh" FromRole="TinhTDEE" ToRole="Table_GioiTinh" />
+        </EntityType>
+        <Association Name="FK_BinhLuan_NguoiDung">
+          <End Role="NguoiDung" Type="Self.NguoiDung" Multiplicity="0..1" />
+          <End Role="BinhLuan" Type="Self.BinhLuan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NguoiDung">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="BinhLuan">
+              <PropertyRef Name="NguoiDung_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BinhLuan_ThucDon">
+          <End Role="ThucDon" Type="Self.ThucDon" Multiplicity="0..1" />
+          <End Role="BinhLuan" Type="Self.BinhLuan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ThucDon">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="BinhLuan">
+              <PropertyRef Name="ThucDon_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NguoiDung_BinhLuan">
+          <End Role="BinhLuan" Type="Self.BinhLuan" Multiplicity="0..1" />
+          <End Role="NguoiDung" Type="Self.NguoiDung" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BinhLuan">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="NguoiDung">
+              <PropertyRef Name="comment_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TinhTDEE_CuongDo">
+          <End Role="CuongDo" Type="Self.CuongDo" Multiplicity="0..1" />
+          <End Role="TinhTDEE" Type="Self.TinhTDEE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CuongDo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="TinhTDEE">
+              <PropertyRef Name="CuongDoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KetQuaTDEE_ThucDon">
+          <End Role="ThucDon" Type="Self.ThucDon" Multiplicity="0..1" />
+          <End Role="KetQuaTDEE" Type="Self.KetQuaTDEE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ThucDon">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="KetQuaTDEE">
+              <PropertyRef Name="ThucDon_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Table_Online_NguoiDung">
+          <End Role="NguoiDung" Type="Self.NguoiDung" Multiplicity="0..1" />
+          <End Role="Table_Online" Type="Self.Table_Online" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NguoiDung">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Table_Online">
+              <PropertyRef Name="NguoiDung_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TinhTDEE_Table_GioiTinh">
+          <End Role="Table_GioiTinh" Type="Self.Table_GioiTinh" Multiplicity="0..1" />
+          <End Role="TinhTDEE" Type="Self.TinhTDEE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Table_GioiTinh">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="TinhTDEE">
+              <PropertyRef Name="GioiTinhID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="qlskEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BinhLuans" EntityType="Self.BinhLuan" />
+          <EntitySet Name="CacMeoVats" EntityType="Self.CacMeoVat" />
+          <EntitySet Name="CheDoes" EntityType="Self.CheDo" />
+          <EntitySet Name="CuongDoes" EntityType="Self.CuongDo" />
+          <EntitySet Name="KetQuaTDEEs" EntityType="Self.KetQuaTDEE" />
+          <EntitySet Name="NguoiDungs" EntityType="Self.NguoiDung" />
+          <EntitySet Name="Table_GioiTinh" EntityType="Self.Table_GioiTinh" />
+          <EntitySet Name="Table_Online" EntityType="Self.Table_Online" />
+          <EntitySet Name="ThucDons" EntityType="Self.ThucDon" />
+          <EntitySet Name="TinhTDEEs" EntityType="Self.TinhTDEE" />
+          <AssociationSet Name="FK_BinhLuan_NguoiDung" Association="Self.FK_BinhLuan_NguoiDung">
+            <End Role="NguoiDung" EntitySet="NguoiDungs" />
+            <End Role="BinhLuan" EntitySet="BinhLuans" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BinhLuan_ThucDon" Association="Self.FK_BinhLuan_ThucDon">
+            <End Role="ThucDon" EntitySet="ThucDons" />
+            <End Role="BinhLuan" EntitySet="BinhLuans" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NguoiDung_BinhLuan" Association="Self.FK_NguoiDung_BinhLuan">
+            <End Role="BinhLuan" EntitySet="BinhLuans" />
+            <End Role="NguoiDung" EntitySet="NguoiDungs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TinhTDEE_CuongDo" Association="Self.FK_TinhTDEE_CuongDo">
+            <End Role="CuongDo" EntitySet="CuongDoes" />
+            <End Role="TinhTDEE" EntitySet="TinhTDEEs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KetQuaTDEE_ThucDon" Association="Self.FK_KetQuaTDEE_ThucDon">
+            <End Role="ThucDon" EntitySet="ThucDons" />
+            <End Role="KetQuaTDEE" EntitySet="KetQuaTDEEs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Table_Online_NguoiDung" Association="Self.FK_Table_Online_NguoiDung">
+            <End Role="NguoiDung" EntitySet="NguoiDungs" />
+            <End Role="Table_Online" EntitySet="Table_Online" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TinhTDEE_Table_GioiTinh" Association="Self.FK_TinhTDEE_Table_GioiTinh">
+            <End Role="Table_GioiTinh" EntitySet="Table_GioiTinh" />
+            <End Role="TinhTDEE" EntitySet="TinhTDEEs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="qlskModelStoreContainer" CdmEntityContainer="qlskEntities">
+          <EntitySetMapping Name="BinhLuans">
+            <EntityTypeMapping TypeName="qlskModel.BinhLuan">
+              <MappingFragment StoreEntitySet="BinhLuan">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ThucDon_id" ColumnName="ThucDon_id" />
+                <ScalarProperty Name="NguoiDung_id" ColumnName="NguoiDung_id" />
+                <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+                <ScalarProperty Name="ngaytao" ColumnName="ngaytao" />
+                <ScalarProperty Name="User_Ten" ColumnName="User_Ten" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CacMeoVats">
+            <EntityTypeMapping TypeName="qlskModel.CacMeoVat">
+              <MappingFragment StoreEntitySet="CacMeoVat">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
+                <ScalarProperty Name="CacMeoVat1" ColumnName="CacMeoVat" />
+                <ScalarProperty Name="Link" ColumnName="Link" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CheDoes">
+            <EntityTypeMapping TypeName="qlskModel.CheDo">
+              <MappingFragment StoreEntitySet="CheDo">
+                <ScalarProperty Name="MotaCD" ColumnName="MotaCD" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
+                <ScalarProperty Name="CacBaiTap" ColumnName="CacBaiTap" />
+                <ScalarProperty Name="Link" ColumnName="Link" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CuongDoes">
+            <EntityTypeMapping TypeName="qlskModel.CuongDo">
+              <MappingFragment StoreEntitySet="CuongDo">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KetQuaTDEEs">
+            <EntityTypeMapping TypeName="qlskModel.KetQuaTDEE">
+              <MappingFragment StoreEntitySet="KetQuaTDEE">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="KetQua" ColumnName="KetQua" />
+                <ScalarProperty Name="HinhAnhTD" ColumnName="HinhAnhTD" />
+                <ScalarProperty Name="ThucDon_ID" ColumnName="ThucDon_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NguoiDungs">
+            <EntityTypeMapping TypeName="qlskModel.NguoiDung">
+              <MappingFragment StoreEntitySet="NguoiDung">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="TaiKhoan" ColumnName="TaiKhoan" />
+                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+                <ScalarProperty Name="TenNguoiDung" ColumnName="TenNguoiDung" />
+                <ScalarProperty Name="CapDo" ColumnName="CapDo" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="comment_id" ColumnName="comment_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_GioiTinh">
+            <EntityTypeMapping TypeName="qlskModel.Table_GioiTinh">
+              <MappingFragment StoreEntitySet="Table_GioiTinh">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ThuocGioiTinh" ColumnName="ThuocGioiTinh" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_Online">
+            <EntityTypeMapping TypeName="qlskModel.Table_Online">
+              <MappingFragment StoreEntitySet="Table_Online">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="SoTV" ColumnName="SoTV" />
+                <ScalarProperty Name="NguoiDung_id" ColumnName="NguoiDung_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ThucDons">
+            <EntityTypeMapping TypeName="qlskModel.ThucDon">
+              <MappingFragment StoreEntitySet="ThucDon">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
+                <ScalarProperty Name="TenMonAn" ColumnName="TenMonAn" />
+                <ScalarProperty Name="Loai" ColumnName="Loai" />
+                <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+                <ScalarProperty Name="NguyenLieu" ColumnName="NguyenLieu" />
+                <ScalarProperty Name="Buoc" ColumnName="Buoc" />
+                <ScalarProperty Name="Mota2" ColumnName="Mota2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TinhTDEEs">
+            <EntityTypeMapping TypeName="qlskModel.TinhTDEE">
+              <MappingFragment StoreEntitySet="TinhTDEE">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="CanNang" ColumnName="CanNang" />
+                <ScalarProperty Name="ChieuCao" ColumnName="ChieuCao" />
+                <ScalarProperty Name="Tuoi" ColumnName="Tuoi" />
+                <ScalarProperty Name="CuongDoID" ColumnName="CuongDoID" />
+                <ScalarProperty Name="GioiTinhID" ColumnName="GioiTinhID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

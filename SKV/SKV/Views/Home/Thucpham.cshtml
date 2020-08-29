@@ -1,0 +1,62 @@
+﻿@using SKV.Models
+@model List<ThucDon>
+@{
+    ViewBag.Title = "Thucpham";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/CSS/thucpham.css" rel="stylesheet" />
+<script src="~/JV/jquery-3.3.1.min.js">y</script>
+<script src="~/JV/quey.js"></script>
+
+<div class="baner">
+    <div class="over">
+        <div class="sli">
+            <img src="~/IMG/11tp.jpg" />
+            <img src="~/IMG/2tp.jpg" />
+            <img src="~/IMG/3tp.jpg" />
+        </div>
+    </div>
+</div>
+<div class="main">
+    <div class="text1">
+        <h1 style="text-align:center"> GÓI KHẨU PHẦN ĂN TĂNG CÂN </h1>
+    </div>
+    <div class="hinh123 ">
+        @foreach (var item in ViewBag.TangCan)
+        {
+            <div class="hinh1">
+                <a href="@Url.Action("ChiTietSP","Home", new { @id = item.id})">
+                    <img src="@Url.Content("~/IMG/" + item.HinhAnh)" alt="Hình ảnh" width="300" height="300" />
+                    <h3 style="text-align:center;color:black;">@item.TenMonAn </h3>
+                    <h5 style="text-align:center;color:black;"> @item.MoTa </h5>
+                </a>
+
+            </div>
+        }
+
+    </div>
+
+
+
+
+
+    <div class="text2">
+        <h1 style="text-align:center; padding-top:50px;"> GÓI KHẨU PHẦN ĂN GIẢM CÂN </h1>
+    </div>
+    <div class="hinh456 ">
+        @foreach (var item in ViewBag.GiamCan)
+        {
+            <div class="hinh4">
+                <a href="@Url.Action("ChiTietSP","Home", new { @id = item.id})">
+                    <img src="@Url.Content("~/IMG/" + item.HinhAnh)" alt="Hình ảnh" width="300" height="300" />
+                    <h3 style="text-align:center;color:black;">@item.TenMonAn </h3>
+                    <h5 style="text-align:center;color:black;"> @item.MoTa </h5>
+                </a>
+            </div>
+        }
+
+    </div>
+    <div class="right"></div>
+</div>
+
+

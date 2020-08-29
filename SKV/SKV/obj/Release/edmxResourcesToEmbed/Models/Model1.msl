@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="qlskModelStoreContainer" CdmEntityContainer="qlskEntities">
+    <EntitySetMapping Name="CacMeoVats">
+      <EntityTypeMapping TypeName="qlskModel.CacMeoVat">
+        <MappingFragment StoreEntitySet="CacMeoVat">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
+          <ScalarProperty Name="CacMeoVat1" ColumnName="CacMeoVat" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CheDoes">
+      <EntityTypeMapping TypeName="qlskModel.CheDo">
+        <MappingFragment StoreEntitySet="CheDo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
+          <ScalarProperty Name="CacBaiTap" ColumnName="CacBaiTap" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CuongDoes">
+      <EntityTypeMapping TypeName="qlskModel.CuongDo">
+        <MappingFragment StoreEntitySet="CuongDo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NguoiDungs">
+      <EntityTypeMapping TypeName="qlskModel.NguoiDung">
+        <MappingFragment StoreEntitySet="NguoiDung">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="TaiKhoan" ColumnName="TaiKhoan" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="TenNguoiDung" ColumnName="TenNguoiDung" />
+          <ScalarProperty Name="CapDo" ColumnName="CapDo" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Table_GioiTinh">
+      <EntityTypeMapping TypeName="qlskModel.Table_GioiTinh">
+        <MappingFragment StoreEntitySet="Table_GioiTinh">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ThuocGioiTinh" ColumnName="ThuocGioiTinh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ThucDons">
+      <EntityTypeMapping TypeName="qlskModel.ThucDon">
+        <MappingFragment StoreEntitySet="ThucDon">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
+          <ScalarProperty Name="TenMonAn" ColumnName="TenMonAn" />
+          <ScalarProperty Name="Loai" ColumnName="Loai" />
+          <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TinhTDEEs">
+      <EntityTypeMapping TypeName="qlskModel.TinhTDEE">
+        <MappingFragment StoreEntitySet="TinhTDEE">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="CanNang" ColumnName="CanNang" />
+          <ScalarProperty Name="ChieuCao" ColumnName="ChieuCao" />
+          <ScalarProperty Name="Tuoi" ColumnName="Tuoi" />
+          <ScalarProperty Name="CuongDoID" ColumnName="CuongDoID" />
+          <ScalarProperty Name="GioiTinhID" ColumnName="GioiTinhID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Table_Online">
+      <EntityTypeMapping TypeName="qlskModel.Table_Online">
+        <MappingFragment StoreEntitySet="Table_Online">
+          <ScalarProperty Name="NguoiDung_id" ColumnName="NguoiDung_id" />
+          <ScalarProperty Name="SoTV" ColumnName="SoTV" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Search" FunctionName="qlskModel.Store.Search">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="qlskModel.Search_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
+          <ScalarProperty Name="CacMeoVat" ColumnName="CacMeoVat" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="id1" ColumnName="id1" />
+          <ScalarProperty Name="HinhAnh1" ColumnName="HinhAnh1" />
+          <ScalarProperty Name="CacBaiTap" ColumnName="CacBaiTap" />
+          <ScalarProperty Name="Link1" ColumnName="Link1" />
+          <ScalarProperty Name="id2" ColumnName="id2" />
+          <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SearchVinh" FunctionName="qlskModel.Store.Search" />
+    <FunctionImportMapping FunctionImportName="timkiemnew" FunctionName="qlskModel.Store.Search" />
+    <FunctionImportMapping FunctionImportName="TIMKIEM" FunctionName="qlskModel.Store.TIMKIEM">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="qlskModel.TIMKIEM_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
+          <ScalarProperty Name="CacMeoVat" ColumnName="CacMeoVat" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="timkiemmeovat" FunctionName="qlskModel.Store.TIMKIEM" />
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,33 @@
+﻿@model IEnumerable<SKV.Models.CheDo>
+
+@{
+    ViewBag.Title = "Trang Quản Lí";
+    Layout = "~/Views/AdminLayout/AdminLayout.cshtml";
+}
+
+<div class="but" style="margin-left: 80px;padding-top:20px; "><a href="@Url.Action("ThemCD","AdminUser")"<button>Thêm Chế Độ<button></a></div>
+<div class="content" style="margin-left:100px; padding-top:50px;">
+
+    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+        <thead>
+            <tr align="center">
+                <th>Hình Ảnh </th>
+                <th>Các Bài Tập</th>
+                <th>Link </th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="odd gradeX" align="center">
+                    <td>@Html.DisplayFor(modelItem => item.HinhAnh)</td>
+                    <td>@Html.DisplayFor(modelItem => item.CacBaiTap)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Link)</td>               
+                    <td><a href="@Url.Action("SuaCD","AdminUser",new {@id = item.id })">Sửa</a></td>
+                    <td> <a href="@Url.Action("XoaCD","AdminUser",new { @id = item.id})">Xóa</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

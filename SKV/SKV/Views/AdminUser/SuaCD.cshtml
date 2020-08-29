@@ -1,0 +1,52 @@
+﻿@model SKV.Models.CheDo
+
+@{
+    ViewBag.Title = "Trang Quản Lí";
+    Layout = "~/Views/AdminLayout/AdminLayout.cshtml";
+}
+
+<h2>Sửa Chế Độ Luyện Tập</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Chế Độ</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HinhAnh)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HinhAnh)
+            @Html.ValidationMessageFor(model => model.HinhAnh)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CacBaiTap)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CacBaiTap)
+            @Html.ValidationMessageFor(model => model.CacBaiTap)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Link)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Link)
+            @Html.ValidationMessageFor(model => model.Link)
+        </div>
+
+
+
+
+        <p>
+            <input type="submit" value="Cập Nhật" />
+        </p>
+    </fieldset>
+}
+
+
+

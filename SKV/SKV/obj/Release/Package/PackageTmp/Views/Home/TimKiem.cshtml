@@ -1,0 +1,134 @@
+﻿@using SKV.Models;
+@model IEnumerable<SKV.Models.ThucDon>
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Sức Khỏe Vàng</title>
+    <link href="~/CSS/index.css" rel="stylesheet" />
+    <script src="~/JV/jquery-3.3.1.min.js">y</script>
+    <script src="~/JV/quey.js"></script>
+</head>
+
+<body>
+    <div class="top1">
+        <div class="add">
+            <span class="loca">
+                <span>
+                    <span><img src="~/IMG/icon_phone.png" width="20" /></span>
+
+                    <span class="font1">083 513 6789</span>
+                </span>
+                <span>
+                    <span><img src="~/IMG/e-mail-icoontje-wit.png" width="32" /></span>
+
+
+                    <span class="font1">Suckhoevang@gmail.com</span>
+                </span>
+                <span>
+                </span>
+            </span>
+            <!-- <span class="wl">Hi!</span> -->
+        </div>
+        <div class="logo1">
+            <div class="log">
+                <img src="~/IMG/42922250_491893567957426_5010879434471768064_n.jpg" width="200" height="91" />
+            </div>
+            <div class="mn">
+                <ul>
+                    <li><a href="@Url.Action("Index","Home")">TRANG CHỦ</a></li>
+                    <li><a href="@Url.Action("Thucpham","Home")">THỰC PHẨM </a></li>
+                    <li><a href="@Url.Action("Luyentap","Home")">LUYỆN TẬP </a></li>
+                    <li><a href="@Url.Action("Meovat","Home")">MẸO VẶT </a></li>
+                    <li>
+                        <div class="box">
+                            <div class="container-4">
+                                @using (Html.BeginForm("TimKiem", "Home", FormMethod.Get))
+                                {
+                                    @Html.TextBox("TimKiem", "", htmlAttributes: new { @placeholder = "nhập từ khóa" })
+                                    <button>tìm kiếm</button>
+                                }
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="login">
+                <ul>
+                    @if (Session["UserName"] == null)
+                    {
+                        <li><a style="color:black" href="@Url.Action("Dangki","Home")">ĐĂNG KÍ</a></li>
+                        <li id="lg"><a style="color:black" href="@Url.Action("Login","Home")">ĐĂNG NHẬP</a></li>
+                    }
+                    else
+                    {
+                        <p>Xin chào: @Session["UserName"]</p>
+                        <a href="@Url.Action("Thoat","Home")">
+                            <p>Thoát </p>
+                        </a>
+
+                    }
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="baner">
+        <div class="over">
+            <div class="sli">
+                <img src="~/IMG/salad-2756467_1920.jpg" />
+                <img src="~/IMG/sports-731506_1920.jpg" />
+                <img src="~/IMG/handstand-2224104_1920.jpg" />
+            </div>
+        </div>
+    </div>
+    <div class="hinh456 ">
+        @if (Model.Count() == 0)
+        {
+            <center>
+                <h2>
+                    KHÔNG TÌM THẤY MÓN ĂN
+                </h2>
+            </center>
+
+        }
+        else
+        {
+            foreach (var item in Model)
+            {
+                <div class="hinh4">
+                    <img src="@Url.Content("~/IMG/" + item.HinhAnh)" alt="Hình ảnh" width="300" height="300" />
+                    <h3 style="text-align:center">@item.TenMonAn </h3>
+                    <h5 style="text-align:center"> @item.MoTa </h5>
+                </div>
+            }
+
+
+        }
+     </div>   
+
+        <div id="footer" style="margin-top:1300px">
+            <div class="hotro">
+                <h2>Hỗ trợ</h2>
+                <ul><li>Hotline: 083 513 6789</li></ul>
+                <ul><li>Email: suckhoeviet@gmail.com</li></ul>
+            </div>
+            <div class="lh">
+                <h2>Liên hệ</h2>
+                <ul><li>Tuyển dụng</li></ul>
+                <ul><li>Tư vấn trực tiếp</li></ul>
+            </div>
+            <div class="tt">
+                <h2>Thông tin</h2>
+                <ul><li>Về chúng tôi</li></ul>
+                <ul><li>Chính sách bảo mật</li></ul>
+            </div>
+        </div>
+        <script type="text/javascript" src="quey.js"></script>
+   
+</body>
+</html>

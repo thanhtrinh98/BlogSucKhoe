@@ -1,0 +1,179 @@
+﻿
+@using SKV.Models
+@model TDEE
+@{
+    ViewBag.Title = "TinhBMR";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{ 
+    qlskEntities db = new qlskEntities();
+}
+
+<style>
+    fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: .35em .5em .75em;
+    padding-left:550px;
+}
+    .hinh123 {
+        width: 100%;
+        height: 350px;
+    }
+    .hinh1 {
+     
+        margin: 0 45px;
+    }
+    .hinh456 {
+        width: 100%;
+        height: 350px;
+    }
+
+  tutu 
+   
+</style>
+<div class="main">
+    <div class="khung1" style=" padding:15px ">
+        @using (Html.BeginForm("TinhBMR", "TDEE", FormMethod.Post))
+        {
+            <fieldset>
+                <legend style="font-weight:bold; font-size:20px;">Tính TDEE</legend>
+
+                <div class="editor-label">
+                    @Html.Label("Giới Tính")
+                    <br />
+                    @Html.DropDownList("txt_gioitinh", (IEnumerable<SelectListItem>)ViewBag.GT)
+                </div>
+
+
+                <div class="editor-label">
+                    @Html.Label("Cân Nặng(kg)")
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.CANNANG)
+                    @Html.ValidationMessageFor(model => model.CANNANG)
+                </div>
+
+                <div class="editor-label">
+                    @Html.Label("Chiều Cao(cm)")
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.CHIEUCAO)
+                    @Html.ValidationMessageFor(model => model.CHIEUCAO)
+                </div>
+
+                <div class="editor-label">
+                    @Html.Label("Tuổi")
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.TUOI)
+                    @Html.ValidationMessageFor(model => model.TUOI)
+                </div>
+
+                <br>
+
+                <div class="editor-label">
+                    @Html.Label("Cường Độ Tập Luyện")
+                    <br />
+                    @Html.DropDownList("txt_cuongdo", (IEnumerable<SelectListItem>)ViewBag.R)
+                </div>
+
+
+
+                <br /><input type="submit" value="Tính" style=" width:100px; height:50px;" /><br />
+            </fieldset>
+        }
+        <br /><h2>TDEE của bạn là: <span style="color:red;">@ViewBag.tong</span> @ViewBag.Calo </h2>
+        <br /><h2 style="color:orange;">Các món ăn thích hợp với chỉ số của bạn: <span style="color:red;">@ViewBag.ha</span></h2>
+        <div class="hinh123">
+            @if (ViewBag.tong > 500 && ViewBag.tong < 1000)
+            {
+                foreach (var item in db.ThucDons.Where(n => n.Mota2 == "Tăng cân").ToList())
+                {
+            <div class="hinh1">
+
+                <a href="@Url.Action("ChiTietSP","Home", new { @id = item.id})">
+                    <img src="@Url.Content("~/IMG/" + item.HinhAnh)" alt="Hình ảnh" width="300" height="300" />
+                    <h3 style="text-align:center;color:black;">@item.TenMonAn </h3>
+                    <h5 style="text-align:center;color:black;"> @item.MoTa </h5>
+                </a>
+                @*<div class="" style="float:left; margin-left:40px;">
+                    <img src="~/IMG/@item.HinhAnh" width="300" height="300" />
+
+                </div>
+                <br />*@                
+                @*@item.TenMonAn;*@
+            </div>
+
+                }
+              
+            }
+            @if (ViewBag.tong > 1000)
+            {
+                foreach (var item in db.ThucDons.Where(n => n.Mota2 == "Giảm cân").ToList())
+                {
+            <div class="hinh1">
+                <a href="@Url.Action("ChiTietSP","Home", new { @id = item.id})">
+                    <img src="@Url.Content("~/IMG/" + item.HinhAnh)" alt="Hình ảnh" width="300" height="300" />
+                    <h3 style="text-align:center; color:black;">@item.TenMonAn </h3>
+                    <h5 style="text-align:center;color:black;"> @item.MoTa </h5>
+                </a>
+                @*@item.TenMonAn;
+        <br />
+        <div class="" style="float:left;">
+            <img src="~/IMG/@item.HinhAnh" width="300" height="300" />
+
+        </div>*@
+
+            </div>
+                }
+            }
+
+        </div>
+        <br /><h2 style="color:orange;">Các bài tập thích hợp với chỉ số của bạn: <span style="color:red;">@ViewBag.ha</span></h2>
+        <div class="hinh456">
+            @if (ViewBag.tong > 500 && ViewBag.tong < 1000)
+            {
+                foreach (var item in db.CheDoes.Where(n => n.MotaCD == "Tăng cân").ToList())
+                {
+            <div class="hinh1">
+            
+                <div class="" style="float:left; margin-left:40px;">
+                    <img src="~/IMG/@item.HinhAnh" width="300" height="300" />
+
+                </div>
+                <a href="@item.Link"><h3 style="text-align:center; color:black;"> @item.CacBaiTap </h3></a>
+                <br />
+            </div>
+
+                }
+
+            }
+            @if (ViewBag.tong > 1000)
+            {
+                foreach (var item in db.CheDoes.Where(n => n.MotaCD == "Giảm cân").ToList())
+                {
+            <div class="hinh1">
+
+                <div class="" style="float:left;">
+                    <img src="~/IMG/@item.HinhAnh" width="300" height="300" />
+
+                </div>
+                <a href="@item.Link"><h3 style="text-align:center; color:black;"> @item.CacBaiTap </h3></a>
+                <br />
+            </div>
+                }
+            }
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+   

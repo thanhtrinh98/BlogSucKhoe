@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewBag.Title = "ChiTietSP";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model SKV.Models.BinhLuan
+
+<link href="~/CSS/ChiTietSP.css" rel="stylesheet" />
+
+
+<div class="main">
+    <div class="giua" style="margin-left:550px; margin-top:50px;">
+
+        @foreach (var item in ViewBag.ListThucDon)
+        {
+            <img src="@Url.Content("~/IMG/" + item.HinhAnh)" alt="Hình ảnh" width="300" height="300" />
+            <h2>@item.TenMonAn</h2>
+            <h2>Nguyên Liệu</h2>
+            
+                @item.NguyenLieu
+
+
+                @*Bắp cải tím<br /> Bắp cải trắng<br />  Xà lách<br /> Hành tây - hành tím<br />  Đậu hà lan - ngô mỹ<br /> Bông cải xanh<br /> Bò (tái)
+                <h2>Các Bước</h2>
+                <h4>
+                    - Xào thịt bò trước (nên nêm nếm trước một ít) lúc ăn chung với sốt thì sẽ ngon hơn.<br />
+
+
+                    - Tất cả rau của quả rửa sạch sơ chế cho kỹ, cắt nhỏ cho dễ ăn và trộn.
+                </h4>*@
+          
+            <h2>Các Bước</h2>
+            @item.Buoc
+        }
+    </div>
+
+    <!-- Blog Post Content Column -->
+
+    <div class="col-md-8" style="margin-top:30px; margin-bottom:50px">
+        @if (Session["UserName"] == null)
+        {
+            <h3 style="color:white"><a href="@Url.Action("Login","Home")">Đăng Nhập</a> Để Có Thể Bình Luận</h3>
+        }
+        else
+        {
+
+            <!-- Comments Form -->
+            using (Html.BeginForm("BinhLuan", "Comment", FormMethod.Post))
+            {
+                <div class="well">
+                    <h4 style="color: #192536;">Viết bình luận ...<span class="glyphicon glyphicon-pencil"></span></h4>
+                    <div class="form-group">
+                        @Html.TextAreaFor(model => model.NoiDung, new { @class = "form-control", @rows = 3 })
+                    </div>
+                    <button type="submit" class="btn btn-primary">Gửi</button>
+                </div>
+            }
+        }
+        <hr>
+
+        <!-- Posted Comments -->
+        <!-- Comment -->
+
+        @foreach (var item in ViewBag.Comment)
+        {
+            <div class="media">
+                <a class="pull-left" href="#">
+                    @*<img class="media-object" src="~/Content/Asset_Layout/Hinh_4K/Music/User/@item.User_HinhAnh" width="60px" height="60px" alt="">*@
+                </a>
+                <div class="media-body" style="color:white">
+                    <h4 class="media-heading">
+                        @item.User_Ten
+                        <small>@item.ngaytao</small>
+                    </h4>
+                    @item.NoiDung
+                </div>
+            </div>
+        }
+    </div>
+    </div>
+

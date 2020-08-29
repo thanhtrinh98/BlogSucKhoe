@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b75a9a1e0d4144f0a7574387601adb0b" Name="Diagram1">
+        <EntityTypeShape EntityType="qlskModel.CacMeoVat" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="qlskModel.CheDo" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="qlskModel.CuongDo" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="qlskModel.NguoiDung" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="qlskModel.Table_GioiTinh" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="qlskModel.ThucDon" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="qlskModel.TinhTDEE" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="qlskModel.FK_TinhTDEE_CuongDo" ManuallyRouted="false" />
+        <AssociationConnector Association="qlskModel.FK_TinhTDEE_Table_GioiTinh" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="qlskModel.Table_Online" Width="1.5" PointX="8" PointY="1" />
+        <AssociationConnector Association="qlskModel.FK_Table_Online_NguoiDung" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

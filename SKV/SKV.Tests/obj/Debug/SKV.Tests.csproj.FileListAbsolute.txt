@@ -1,0 +1,78 @@
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\SKV.Tests.dll.config
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\SKV.Tests.dll
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\SKV.Tests.pdb
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\Newtonsoft.Json.dll
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\SKV.dll
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\System.Net.Http.dll
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\System.Net.Http.Formatting.dll
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\System.Net.Http.WebRequest.dll
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\System.Web.Helpers.dll
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\System.Web.Http.dll
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\System.Web.Http.WebHost.dll
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\System.Web.Mvc.dll
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\System.Web.Razor.dll
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\System.Web.WebPages.dll
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\EntityFramework.dll
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\SKV.pdb
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\SKV.dll.config
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\Newtonsoft.Json.xml
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\System.Net.Http.xml
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\System.Net.Http.Formatting.xml
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\System.Net.Http.WebRequest.xml
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\System.Web.Helpers.xml
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\System.Web.Http.xml
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\System.Web.Http.WebHost.xml
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\System.Web.Mvc.xml
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\System.Web.Razor.xml
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\System.Web.WebPages.xml
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+D:\TDMU\D16HT01\SKV\SKV.Tests\bin\Debug\EntityFramework.xml
+D:\TDMU\D16HT01\SKV\SKV.Tests\obj\Debug\SKV.Tests.csprojAssemblyReference.cache
+D:\TDMU\D16HT01\SKV\SKV.Tests\obj\Debug\SKV.Tests.csproj.CoreCompileInputs.cache
+D:\TDMU\D16HT01\SKV\SKV.Tests\obj\Debug\SKV.Tests.csproj.CopyComplete
+D:\TDMU\D16HT01\SKV\SKV.Tests\obj\Debug\SKV.Tests.dll
+D:\TDMU\D16HT01\SKV\SKV.Tests\obj\Debug\SKV.Tests.pdb
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\bin\Debug\SKV.Tests.dll.config
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\bin\Debug\SKV.Tests.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\bin\Debug\SKV.Tests.pdb
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\bin\Debug\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\bin\Debug\Newtonsoft.Json.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\bin\Debug\SKV.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\bin\Debug\System.Net.Http.Formatting.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\bin\Debug\System.Web.Helpers.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\bin\Debug\System.Web.Http.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\bin\Debug\System.Web.Http.WebHost.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\bin\Debug\System.Web.Mvc.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\bin\Debug\System.Web.Razor.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\bin\Debug\System.Web.WebPages.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\bin\Debug\EntityFramework.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\bin\Debug\System.Net.Http.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\bin\Debug\SKV.pdb
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\bin\Debug\SKV.dll.config
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\bin\Debug\Newtonsoft.Json.xml
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\bin\Debug\System.Net.Http.Formatting.xml
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\bin\Debug\System.Web.Helpers.xml
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\bin\Debug\System.Web.Http.xml
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\bin\Debug\System.Web.Http.WebHost.xml
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\bin\Debug\System.Web.Mvc.xml
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\bin\Debug\System.Web.Razor.xml
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\bin\Debug\System.Web.WebPages.xml
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\bin\Debug\EntityFramework.xml
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\bin\Debug\System.Net.Http.xml
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\obj\Debug\SKV.Tests.csprojAssemblyReference.cache
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\obj\Debug\SKV.Tests.csproj.CoreCompileInputs.cache
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\obj\Debug\SKV.Tests.csproj.CopyComplete
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\obj\Debug\SKV.Tests.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV.Tests\obj\Debug\SKV.Tests.pdb

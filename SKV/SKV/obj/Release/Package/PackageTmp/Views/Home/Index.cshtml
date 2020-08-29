@@ -1,0 +1,143 @@
+﻿    @{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Sức Khỏe Vàng</title>
+    <link href="~/CSS/index.css" rel="stylesheet" />
+    <script src="~/JV/jquery-3.3.1.min.js">y</script>
+    <script src="~/JV/quey.js"></script>
+</head>
+
+<body>
+    <div class="top1">
+        <div class="add">
+            <span class="loca">
+                <span>
+                    <span><img src="~/IMG/icon_phone.png" width="20" /></span>
+                    
+                    <span class="font1">083 513 6789</span>
+                </span>
+                <span>
+                    <span><img src="~/IMG/e-mail-icoontje-wit.png" width="32" /></span>
+
+                  
+                    <span class="font1">Suckhoevang@gmail.com</span>
+                </span>
+                <span>
+                </span>
+            </span>
+            <span class="wl"> <div class="right">Số Lượng Thành Viên : @ViewBag.Songuoidung</div></span>
+        </div>
+        <div class="logo1">
+            <div class="log">
+                <img src="~/IMG/42922250_491893567957426_5010879434471768064_n.jpg" width="200" height="91" />
+            </div>
+            <div class="mn">
+                <ul>
+                    <li><a href="@Url.Action("Index","Home")">TRANG CHỦ</a></li>
+                    <li><a href="@Url.Action("Thucpham","Home")">THỰC PHẨM </a></li>
+                    <li><a href="@Url.Action("Luyentap","Home")">LUYỆN TẬP </a></li>
+                    <li><a href="@Url.Action("Meovat","Home")">MẸO VẶT </a></li>
+                    <li>
+                        <div class="box">
+                            <div class="container-4">
+                                @using (Html.BeginForm("TimKiem", "Home", FormMethod.Post))
+                                {
+                                    <input type="text" id="skey" name="skey" placeholder="Search...                  🔍" />
+                                    <input type="submit" value="Tim Kiem" />
+                                }
+
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="login">
+                <ul>
+                    @if (Session["UserName"] == null)
+                            {
+                        <li><a style="color:black" href="@Url.Action("Dangki","Home")">ĐĂNG KÍ</a></li>
+                        <li id="lg"><a style="color:black" href="@Url.Action("Login","Home")">ĐĂNG NHẬP</a></li>
+                    }
+                    else
+                    {
+                        <p>Xin chào: @Session["UserName"]</p>
+                        <a href="@Url.Action("Thoat","Home")">
+                            <p>Thoát </p>
+                        </a>
+                        
+                    }
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="baner">
+        <div class="over">
+            <div class="sli">
+                <img src="~/IMG/salad-2756467_1920.jpg" />
+                <img src="~/IMG/sports-731506_1920.jpg" />
+                <img src="~/IMG/handstand-2224104_1920.jpg" />
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="left">
+            <p style="color:#000">CÁC BƯỚC CƠ BẢN ĐỂ CÓ MỘT SỨC KHỎE VÀNG:</p>
+            <br /><p style="color:#000" id="gach">- - -</p>
+            <div class="bao">
+                <div style="color:#000" class="number">
+                    1
+                </div>
+                <div class="text">
+                    <div style="color:#000" class="cc">ĂN & UỐNG</div>
+                    <br />Ăn uống lành mạnh mang lại rất nhiều lợi ích, nhất là chúng ta biến nó thành thói quen hàng ngày. Thiết lập phong cách sống lành mạnh ngay từ sớm sẽ mang nhiều lợi ích lâu dài. Những người tập ăn uống lành mạnh ngay từ nhỏ sẽ giữ được thói quen này ngay cả khi họ trưởng thành. Việc này giúp họ tránh được nhiều bệnh khi lớn tuổi như béo phì, các bệnh tim mạch, tiểu đường và ngay cả ung thư.
+                </div>
+            </div>
+            <div class="bao1">
+                <div style="color:#000" class="number">
+                    2
+                </div>
+                <div class="text">
+                    <div style="color:#000" class="cc">LUYỆN TẬP</div>
+                    <br />Dù chỉ vận động 10 phút mỗi ngày nhưng việc tập thể dục vẫn đem lại nhiều lợi ích cho sức khỏe như giảm căng thẳng, đẹp da, làm chậm quá trình lão hóa.Chúng ta thường nghĩ rằng, luyện tập thể dục thể thao đơn giản chỉ là để thư giãn và rèn luyện cơ bắp, tuy nhiên, thực tế cho thấy luyện tập còn có nhiều lợi ích khác nữa. Vì chưa biết đến tác dụng của việc tập luyện thể dục thể thao nên nhiều người chưa coi trọng việc này.
+
+
+                </div>
+            </div>
+            <div class="bao2">
+                <div style="color:#000" class="number">
+                    3
+                </div>
+                <div class="text">
+                    <div style="color:#000" class="cc">NGHỈ NGƠI</div>
+                    <br />Nghỉ ngơi đủ để cho cơ thể chúng ta nạp và tái tạo lại năng lượng để có một sức khỏe tốt hơn.
+                </div>
+            </div>
+        </div>
+        @*<div class="right">Số Lượng Thành Viên Đăng Kí: @ViewBag.Songuoidung</div>*@
+    </div>
+    <div id="footer">
+        <div class="hotro">
+            <h2>Hỗ trợ</h2>
+            <ul><li>Hotline: 083 513 6789</li></ul>
+            <ul><li>Email: suckhoeviet@gmail.com</li></ul>
+        </div>
+        <div class="lh">
+            <h2>Liên hệ</h2>
+            <ul><li>Tuyển dụng</li></ul>
+            <ul><li>Tư vấn trực tiếp</li></ul>
+        </div>
+        <div class="tt">
+            <h2>Thông tin</h2>
+            <ul><li>Về chúng tôi</li></ul>
+            <ul><li>Chính sách bảo mật</li></ul>
+        </div>
+    </div>
+    <script type="text/javascript" src="quey.js"></script>
+</body>
+</html>

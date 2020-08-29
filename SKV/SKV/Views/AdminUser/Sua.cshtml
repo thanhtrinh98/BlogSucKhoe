@@ -1,0 +1,59 @@
+﻿@model SKV.Models.NguoiDung
+
+@{
+    ViewBag.Title = "Sua";
+    Layout = "~/Views/AdminLayout/AdminLayout.cshtml";
+}
+
+<h2>Sửa Thông Tin Người Dùng</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Thông Tin Người Dùng</legend>
+
+        @Html.HiddenFor(model => model.id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TaiKhoan)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TaiKhoan)
+            @Html.ValidationMessageFor(model => model.TaiKhoan)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MatKhau)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MatKhau)
+            @Html.ValidationMessageFor(model => model.MatKhau)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TenNguoiDung)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TenNguoiDung)
+            @Html.ValidationMessageFor(model => model.TenNguoiDung)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CapDo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CapDo)
+            @Html.ValidationMessageFor(model => model.CapDo)
+        </div>
+
+       
+        <p>
+            <input type="submit" value="Cập nhật" />
+        </p>
+    </fieldset>
+}
+
+
+

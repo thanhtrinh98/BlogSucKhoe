@@ -1,0 +1,124 @@
+D:\TDMU\D16HT01\SKV\SKV\bin\SKV.dll.config
+D:\TDMU\D16HT01\SKV\SKV\bin\SKV.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\SKV.pdb
+D:\TDMU\D16HT01\SKV\SKV\bin\x86\sqlcese40.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\x86\sqlceqp40.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\x86\sqlceme40.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\x86\sqlceer40EN.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\x86\sqlcecompact40.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\x86\sqlceca40.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\x86\Microsoft.VC90.CRT\README_ENU.txt
+D:\TDMU\D16HT01\SKV\SKV\bin\x86\Microsoft.VC90.CRT\msvcr90.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\amd64\sqlcese40.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\amd64\sqlceqp40.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\amd64\sqlceme40.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\amd64\sqlceer40EN.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\amd64\sqlcecompact40.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\amd64\sqlceca40.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\amd64\Microsoft.VC90.CRT\README_ENU.txt
+D:\TDMU\D16HT01\SKV\SKV\bin\amd64\Microsoft.VC90.CRT\msvcr90.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\x86\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest
+D:\TDMU\D16HT01\SKV\SKV\bin\amd64\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest
+D:\TDMU\D16HT01\SKV\SKV\bin\EntityFramework.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\EntityFramework.SqlServer.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\EntityFramework.SqlServerCompact.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\Microsoft.Web.Infrastructure.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\Newtonsoft.Json.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\PagedList.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\PagedList.Mvc.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\System.Data.SqlServerCe.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\System.Net.Http.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\System.Net.Http.Formatting.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\System.Net.Http.WebRequest.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\System.Web.Helpers.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\System.Web.Http.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\System.Web.Http.WebHost.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\System.Web.Mvc.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\System.Web.Razor.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\System.Web.WebPages.Deployment.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\System.Web.WebPages.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\System.Web.WebPages.Razor.dll
+D:\TDMU\D16HT01\SKV\SKV\bin\EntityFramework.xml
+D:\TDMU\D16HT01\SKV\SKV\bin\EntityFramework.SqlServer.xml
+D:\TDMU\D16HT01\SKV\SKV\bin\EntityFramework.SqlServerCompact.xml
+D:\TDMU\D16HT01\SKV\SKV\bin\PagedList.xml
+D:\TDMU\D16HT01\SKV\SKV\bin\PagedList.Mvc.xml
+D:\TDMU\D16HT01\SKV\SKV\bin\Newtonsoft.Json.xml
+D:\TDMU\D16HT01\SKV\SKV\bin\System.Net.Http.xml
+D:\TDMU\D16HT01\SKV\SKV\bin\System.Net.Http.Formatting.xml
+D:\TDMU\D16HT01\SKV\SKV\bin\System.Net.Http.WebRequest.xml
+D:\TDMU\D16HT01\SKV\SKV\bin\System.Web.Helpers.xml
+D:\TDMU\D16HT01\SKV\SKV\bin\System.Web.Http.xml
+D:\TDMU\D16HT01\SKV\SKV\bin\System.Web.Http.WebHost.xml
+D:\TDMU\D16HT01\SKV\SKV\bin\System.Web.Mvc.xml
+D:\TDMU\D16HT01\SKV\SKV\bin\System.Web.Razor.xml
+D:\TDMU\D16HT01\SKV\SKV\bin\System.Web.WebPages.xml
+D:\TDMU\D16HT01\SKV\SKV\bin\System.Web.WebPages.Deployment.xml
+D:\TDMU\D16HT01\SKV\SKV\bin\System.Web.WebPages.Razor.xml
+D:\TDMU\D16HT01\SKV\SKV\obj\Debug\SKV.csproj.CoreCompileInputs.cache
+D:\TDMU\D16HT01\SKV\SKV\obj\Debug\SKV.csproj.CopyComplete
+D:\TDMU\D16HT01\SKV\SKV\obj\Debug\SKV.dll
+D:\TDMU\D16HT01\SKV\SKV\obj\Debug\SKV.pdb
+D:\TDMU\D16HT01\SKV\SKV\obj\Debug\SKV.csprojAssemblyReference.cache
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\SKV.dll.config
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\SKV.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\SKV.pdb
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\x86\sqlcese40.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\x86\sqlceqp40.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\x86\sqlceme40.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\x86\sqlceer40EN.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\x86\sqlcecompact40.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\x86\sqlceca40.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\x86\Microsoft.VC90.CRT\README_ENU.txt
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\x86\Microsoft.VC90.CRT\msvcr90.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\amd64\sqlcese40.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\amd64\sqlceqp40.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\amd64\sqlceme40.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\amd64\sqlceer40EN.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\amd64\sqlcecompact40.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\amd64\sqlceca40.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\amd64\Microsoft.VC90.CRT\README_ENU.txt
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\amd64\Microsoft.VC90.CRT\msvcr90.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\x86\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\amd64\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\EntityFramework.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\EntityFramework.SqlServer.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\EntityFramework.SqlServerCompact.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\Microsoft.Web.Infrastructure.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\Newtonsoft.Json.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\PagedList.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\PagedList.Mvc.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\System.Data.SqlServerCe.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\System.Net.Http.Formatting.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\System.Web.Helpers.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\System.Web.Http.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\System.Web.Http.WebHost.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\System.Web.Mvc.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\System.Web.Razor.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\System.Web.WebPages.Deployment.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\System.Web.WebPages.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\System.Web.WebPages.Razor.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\System.Net.Http.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\EntityFramework.xml
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\EntityFramework.SqlServer.xml
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\EntityFramework.SqlServerCompact.xml
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\PagedList.xml
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\PagedList.Mvc.xml
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\Newtonsoft.Json.xml
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\System.Net.Http.Formatting.xml
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\System.Web.Helpers.xml
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\System.Web.Http.xml
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\System.Web.Http.WebHost.xml
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\System.Web.Mvc.xml
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\System.Web.Razor.xml
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\System.Web.WebPages.xml
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\System.Web.WebPages.Deployment.xml
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\System.Web.WebPages.Razor.xml
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\bin\System.Net.Http.xml
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\obj\Debug\SKV.csprojAssemblyReference.cache
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\obj\Debug\SKV.csproj.CoreCompileInputs.cache
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\obj\Debug\SKV.csproj.CopyComplete
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\obj\Debug\SKV.dll
+D:\Quản Lí Dự Án\TT\TT\SKV\SKV\obj\Debug\SKV.pdb

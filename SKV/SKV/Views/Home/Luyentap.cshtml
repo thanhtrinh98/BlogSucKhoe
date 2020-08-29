@@ -1,0 +1,47 @@
+﻿@using SKV.Models
+@model  List<CheDo>
+@{
+    ViewBag.Title = "Luyentap";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/CSS/luyentap.css" rel="stylesheet" />
+<script src="~/JV/jquery-3.3.1.min.js">y</script>
+<script src="~/JV/quey.js"></script>
+
+<div class="baner">
+    <div class="over">
+        <div class="sli">
+            <img src="~/IMG/sports-731506_1920.jpg" />
+            <img src="~/IMG/training-828760_1920.jpg" />
+            <img src="~/IMG/street-workout-2628919_1920.jpg" />
+        </div>
+    </div>
+</div>
+<div class="main">
+
+    <div class="text1">
+        <h1 style="text-align:center"> CÁC PHƯƠNG PHÁP TẬP LUYỆN </h1>
+    </div>
+    <div class="hinh123">
+        @foreach (var item in Model)
+        {
+
+
+            <div class="hinh1">
+                <img src="@Url.Content("~/IMG/" + item.HinhAnh)" alt="Hình ảnh" width="300" height="300" />
+                <a href="@item.Link"><h3 style="text-align:center;color:black;"> @item.CacBaiTap </h3></a>
+
+            </div>
+        }
+
+    </div>
+
+
+
+
+
+
+
+</div>
+
+
